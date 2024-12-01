@@ -32,7 +32,17 @@ int power(int num,int step) {
 
 int main()
 {
+		Tree tree;
+		tree.insert(5);
+		tree.insert(3);
+		tree.insert(7);
+		tree.insert(2);
+		tree.insert(4);
+		tree.insert(6);
+		tree.insert(8);
+		tree.Print();
 
+		return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
