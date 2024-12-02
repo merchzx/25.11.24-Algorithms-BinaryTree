@@ -41,6 +41,15 @@ int main()
 		tree.insert(6);
 		tree.insert(8);
 		tree.Print();
+		int ket;
+		cout << "Enter key - ";
+		cin >> ket;
+		if (tree.find(ket) ==true) {
+			cout << "true";
+		}
+		else {
+			cout << "false";
+		}
 
 		return 0;
 }
