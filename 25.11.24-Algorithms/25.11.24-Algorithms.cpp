@@ -23,35 +23,32 @@ using namespace std;
 //-O(n = lineynaya)
 //po indexy zvernenya - O(1 = const)
 
-int power(int num,int step) {
-	if (step == 1) {
-		return num;
-	}
-	return num * power(num,step - 1);
+int power(int num, int step) {
+    if (step == 1) {
+        return num;
+    }
+    return num * power(num, step - 1);
 }
 
-int main()
-{
-		Tree tree;
-		tree.insert(5);
-		tree.insert(3);
-		tree.insert(7);
-		tree.insert(2);
-		tree.insert(4);
-		tree.insert(6);
-		tree.insert(8);
-		tree.Print();
-		int ket;
-		cout << "Enter key - ";
-		cin >> ket;
-		if (tree.find(ket) ==true) {
-			cout << "true";
-		}
-		else {
-			cout << "false";
-		}
+int main() {
+    Tree<int> tree;
+    tree.Insert(3);
+    tree.Insert(5);
+    tree.Insert(7);
+    tree.Print();
 
-		return 0;
+    int key;
+    std::cout << "Enter key to find: ";
+    std::cin >> key;
+    if (tree.find(key)) std::cout << "Key " << key << " found.\n";
+    else std::cout << "Key " << key << " not found.\n";
+
+    std::cout << "Enter key to delete: ";
+    std::cin >> key;
+    tree.erase(key);
+    tree.Print();
+
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
